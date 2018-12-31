@@ -34,7 +34,7 @@ public class Game {
         return false;
     }
 
-    private boolean isBoardFull() {
+    public boolean isBoardFull() {
         for (Cell[] row : mCells) {
             for (Cell c : row) {
                 if (c == null || c.isEmpty())
