@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion Versions.compile_sdk
     defaultConfig {
         applicationId "com.mutlucelep.tictactoe"
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Versions.version_code
+        versionName Versions.version_name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,15 +30,19 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:gridlayout-v7:28.0.0'
-    implementation 'com.android.support:support-annotations:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'android.arch.core:core-testing:1.1.1'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation Deps.support_appcompat_v7
+    implementation Deps.support_design
+    implementation Deps.support_gridlayout_v7
+    implementation Deps.support_annotations
+    implementation Deps.support_constraint
+    implementation Deps.arch_lifecycle_ext
+    implementation Deps.kotlin_stblib
+    testImplementation Deps.junit
+    testImplementation Deps.arch_core_testing
+    androidTestImplementation Deps.support_test_runner
+    androidTestImplementation Deps.support_test_rules
+    androidTestImplementation Deps.support_test_espresso_core
+}
+repositories {
+    mavenCentral()
 }
