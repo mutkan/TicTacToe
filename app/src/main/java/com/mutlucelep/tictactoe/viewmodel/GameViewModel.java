@@ -13,7 +13,7 @@ import static com.mutlucelep.tictactoe.utility.StringUtility.stringFromNumbers;
 public class GameViewModel extends ViewModel {
   public ObservableArrayMap<String, String> mCellsObservableArrayMap;
   private Game mGame;
-Ö
+
   public void init(String player1, String player2) {
     mGame = new Game(player1, player2);
     mCellsObservableArrayMap = new ObservableArrayMap<>();
