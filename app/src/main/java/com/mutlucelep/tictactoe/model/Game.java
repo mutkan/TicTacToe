@@ -44,7 +44,7 @@ public class Game {
         return true;
     }
 
-    private boolean hasThreeSameDiagonalCells() {
+    public boolean hasThreeSameDiagonalCells() {
         return areEqual(mCells[0][0], mCells[1][1], mCells[2][2]) ||
                 areEqual(mCells[2][0], mCells[1][1], mCells[0][2]);
     }
