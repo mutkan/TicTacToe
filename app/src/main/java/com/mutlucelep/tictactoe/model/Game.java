@@ -49,7 +49,7 @@ public class Game {
                 areEqual(mCells[2][0], mCells[1][1], mCells[0][2]);
     }
 
-    private boolean hasThreeSameVerticalCells() {
+    public boolean hasThreeSameVerticalCells() {
         for (int i = 0; i < BOARD_SIZE; i++) {
             if (areEqual(mCells[0][i], mCells[1][i], mCells[2][i]))
                 return true;
