@@ -57,7 +57,7 @@ public class Game {
         return false;
     }
 
-    private boolean hasThreeSameHorizontalCells() {
+    public boolean hasThreeSameHorizontalCells() {
         for (int i = 0; i < BOARD_SIZE; i++) {
             if (areEqual(mCells[i][0], mCells[i][1], mCells[i][2]))
                 return true;
